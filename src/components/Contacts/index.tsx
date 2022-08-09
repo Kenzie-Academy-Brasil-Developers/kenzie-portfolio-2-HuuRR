@@ -50,8 +50,7 @@ export const Contacts = () => {
                   My Whatsapp
                 </Text>
                 <Text color="grey2" type="body2">
-                  I'm available for a voice chat, let's about creativity
-                  together?
+                  +55 (47) 99123 7055
                 </Text>
                 <Text
                   as="a"
@@ -73,17 +72,15 @@ export const Contacts = () => {
                 <Text type="heading4" color="grey4">
                   My email
                 </Text>
-                <Text color="grey2" type="body2">
+                {/* <Text color="grey2" type="body2">
                   Send me an email reporting feedbacks, suggestions and ideas
-                </Text>
+                </Text> */}
                 <Text
-                  as="a"
                   color="grey2"
                   type="body2"
-                  target="_blank"
-                  href={`mailto=${userData.emailUser}`}
+                  // href={`mailto=${userData.emailUser}`}
                 >
-                  Send email now
+                  {userData.emailUser}
                 </Text>
               </ContactCardContent>
             </ContactCard>
@@ -95,10 +92,10 @@ export const Contacts = () => {
                 <Text type="heading4" color="grey4">
                   My LinkedIn
                 </Text>
-                <Text color="grey2" type="body2">
+                {/* <Text color="grey2" type="body2">
                   We can create more constant interactions as well as a sharing
                   network
-                </Text>
+                </Text> */}
                 <Text
                   as="a"
                   color="grey2"
@@ -106,7 +103,7 @@ export const Contacts = () => {
                   target="_blank"
                   href={userData.linkedinUser}
                 >
-                  Go to Telegram Now
+                  Go to Linkedin Now
                 </Text>
               </ContactCardContent>
             </ContactCard>

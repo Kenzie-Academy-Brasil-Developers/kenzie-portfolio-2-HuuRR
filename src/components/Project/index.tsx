@@ -19,6 +19,7 @@ interface ReposType {
   description: string;
   git_url: string;
   homepage: string;
+  full_name: string;
 }
 
 export const Project = (): JSX.Element => {
@@ -48,7 +49,6 @@ export const Project = (): JSX.Element => {
           >
             {repository.name}
           </ProjectTitle>
-
           <ProjectStack>
             <Text type="body2" color="grey2">
               Linguagem:
@@ -67,12 +67,21 @@ export const Project = (): JSX.Element => {
               </ProjectStackTech>
             )}
           </ProjectStack>
-
-          <Text type="body1" color="grey2">
-            {repository.description?.substring(0, 129)}
+          <Text
+            as="a"
+            type="body1"
+            color="grey2"
+            target="_blank"
+            href={repository.description}
+          >
+            {/* {repository.description?.substring(0, 129)} */}
+            Website
           </Text>
           <ProjectLinks>
-            <ProjectLink target="_blank" href={repository.git_url}>
+            <ProjectLink
+              target="_blank"
+              href={`https://github.com/${repository.full_name}`}
+            >
               <FaGithub /> Github Code
             </ProjectLink>
             {repository.homepage && (
